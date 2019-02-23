@@ -88,8 +88,7 @@ def image_show():
         button=tk.Button(text="Submit", bg="green", pady=5, command=checkbutton)
         button.pack(pady=10)
         root1.mainloop()
-    # Need to create a folder by the name game contains folders animals, fruits, vegetables and display_pics
-    # In  which those should contain respective images (.png) saved with their names perfectly
+    
     path = "/home/vishnubalu/Desktop/PROGRAMMING/Python/Python/python/python/game/"+info.file
     arr = os.listdir(path)
     arr = random.sample(arr[1:], 10)
@@ -115,7 +114,6 @@ def image_show():
     button2=tk.Button(canvas, text="GUESS", bg="lightblue", pady="5", command=act).place(x=850, y=650)
     root.mainloop()
 
-# To show the score card
 def score_card():
     def call_home():
         hehe.destroy()
@@ -129,8 +127,7 @@ def score_card():
     canvas.pack()
     f = open("score.txt", "r").readlines()
     allinfo = list(f[1].split(" "))
-    #we need to give the file path for the display_pics
-    path = "/home/vishnubalu/Desktop/PROGRAMMING/Python/Python/python/python/game/display_pics"
+    path = "/home/vishnubalu/Desktop/PROGRAMMING/Python/Python/python/python/game/hehe"
     arr = os.listdir(path)
     name = random.sample(arr, 1)
     img=tk.PhotoImage(file=path+"/"+name[0])
