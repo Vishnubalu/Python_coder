@@ -88,8 +88,8 @@ def image_show():
         button=tk.Button(text="Submit", bg="green", pady=5, command=checkbutton)
         button.pack(pady=10)
         root1.mainloop()
-    
-    path = "/home/vishnubalu/Desktop/PROGRAMMING/Python/Python/python/python/game/"+info.file
+    path = os.getcwd()+'/'+info.file
+    #path = "/home/vishnubalu/Desktop/PROGRAMMING/Python/Python/python/python/game/"+info.file
     arr = os.listdir(path)
     arr = random.sample(arr[1:], 10)
     root=tk.Tk()
@@ -127,7 +127,8 @@ def score_card():
     canvas.pack()
     f = open("score.txt", "r").readlines()
     allinfo = list(f[1].split(" "))
-    path = "/home/vishnubalu/Desktop/PROGRAMMING/Python/Python/python/python/game/hehe"
+    path = os.getcwd()+'/hehe'
+    #path = "/home/vishnubalu/Desktop/PROGRAMMING/Python/Python/python/python/game/hehe"
     arr = os.listdir(path)
     name = random.sample(arr, 1)
     img=tk.PhotoImage(file=path+"/"+name[0])
